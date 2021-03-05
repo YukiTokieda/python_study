@@ -1,0 +1,18 @@
+課題2 上記のUIを持つ、下記概要のWebアプリを作成する場合、どのようなフレーム
+ワーク・ライブラリを使ってバックエンドを構築するか、簡単にご提案ください。
+アプリの概要
+● ユーザーがテーブルデータのCSVをアップロードする
+● 左のパネルにあるSelectorなどの情報に基づき、DataFrameの何らかの
+transformation（日毎にSum集計など）を行う
+● Transformationの結果をOutput Tableに表示する
+● Download buttonによりそのoutput tableをCSVとしてダウンロードできるよう
+にする
+
+回答
+FlaskとVue.jsを利用したWebアプリケーションを作成します
+https://github.com/gtalarico/flask-vuejs-template
+
+vue.jsからCSVをuploadしてflaskに保存します
+vue.jsからFLaskにuploadされているCSVとデータフレームに対する操作を入力値としてFlaskに受け渡し
+FlaskでDFの処理を行った後にVue.jsに結果を返して、画面上からDLを出来るようにします。
+CSVの管理はAWSのS３を利用するなども考えます
